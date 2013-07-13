@@ -8,8 +8,8 @@ var express     = require('express')
   , path        = require('path');
 
 
-var routes          = require('./routes')
-  , user            = require('./routes/user')
+var
+    index           = require('./routes/controllers/index.js')
   , activities      = require('./routes/api/activities')
   , suggestions     = require('./routes/api/suggestions')
   // , places          = require('./routes/api/places')
@@ -34,7 +34,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
+app.get('/', index.home);
 
 app.get('/api/v1/activities/all', activities.all);
 app.post('/api/v1/start', hipo.match)
