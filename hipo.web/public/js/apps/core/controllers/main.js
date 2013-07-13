@@ -7,7 +7,7 @@ hipoApp.controller('mainController', function ($scope,$location,wizard,activityS
         $scope.activities = data;
     });
     $scope.suggestFor = function(activity){
-        console.log(activity.name)
+
         wizard.currentActivity = activity.name;
         window.location= "/#/quehagohoy"
     };

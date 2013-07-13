@@ -4,7 +4,7 @@
 <ul>
     <li ng-repeat="attr in suggestion.parameters">
 
-        <div ng-repate="parsed in attr.parsed">
+        <div ng-repeat="parsed in attr.parsed">
             <h5>{{parsed}}</h5>
         </div>
         <h2>{{attr.value}}<small>{{attr.uom.symbol}}</small></h2>
