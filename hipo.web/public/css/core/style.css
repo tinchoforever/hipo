@@ -1,2 +1,7 @@
-body{padding:0; margin:0; overflow: overflow: hidden;}
-img.mock {width:100%;}
+body{
+	padding:0;
+	margin:0;
+	overflow: hidden;
+	background-color: #e4f6a4;
+}
+img {width:100%;}
