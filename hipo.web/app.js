@@ -11,7 +11,8 @@ var express     = require('express')
 var routes          = require('./routes')
   , user            = require('./routes/user')
   , activities      = require('./routes/api/activities')
-  , suggestions     = require('./routes/api/suggestions');
+  , suggestions     = require('./routes/api/suggestions')
+  , hipo            = require('./service/hipo');
 
 
 var app = express();
@@ -36,6 +37,7 @@ app.get('/', routes.index);
 
 app.get('/api/v1/activities/all', activities.all);
 app.get('/api/v1/suggestions', suggestions.detail);
+app.post('/api/v1/start', hipo.match)
 
 
 http.createServer(app).listen(app.get('port'), function(){
