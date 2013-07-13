@@ -15,6 +15,7 @@
     "session-mongoose": "0.2.2",
     "connect": "2.8.3",
     "connect-mongo": "0.3.3",
-    "async": "0.2.9"
+    "async": "0.2.9",
+    "csv-json": "*"
   }
 }
