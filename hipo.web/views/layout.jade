@@ -1,7 +1,16 @@
-doctype 5
+!!! 5
 html
   head
     title= title
-    link(rel='stylesheet', href='/css/style.css')
+    link(href='http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css', rel='stylesheet', type='text/css')
+    link(href='/css/gumby.css', rel='stylesheet', type='text/css')
+    link(href='/css/core/style.css', rel='stylesheet', type='text/css')
+    block styles
+    script(src='/js/libs/angular/1.1.5/angular.min.js')
+    meta(charset='utf-8')
+    title #travel vine
   body
     block content
+  block scripts
+  script(src='http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js')
+  script(async, src='http://platform.vine.co/static/scripts/embed.js')
