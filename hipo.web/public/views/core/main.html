@@ -1,1 +1,6 @@
 <h1> Hola Hipo! </h1>
+
+<div ng-repeat="activity in activities">
+<h2><a href="" ng-click="suggestFor(activity)">{{activity.name}}</a></h2>
+<img alt ="{{activity.name}}" ng-src="{{activity.pic}}"/>
+</div>
