@@ -1,8 +1,8 @@
 'use strict';
-var hipoApp = angular.module('hipoApp.services',[]);
+var hipoApp = angular.module('hipoApp.services');
 
 
-hipoApp.service('suggestionsService', function($http) {
+hipoApp.service('suggestionService', function($http) {
     return {
         getAll: function(hash,callback){
             var url = "/api/v1/suggestions";
