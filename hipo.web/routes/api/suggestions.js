@@ -35,7 +35,7 @@ exports.detail = function(req, res){
 
     var activitySuggestion = {
         name: name,
-        clima: "nublado",
+        weather: "nublado",
         parameters: parameters,
     };
 
