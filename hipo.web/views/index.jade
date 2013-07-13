@@ -1,8 +1,8 @@
 extends layout
 
 block content
-    div(ng-app="hipoApp")
-        div(ng-view, class="ng-scope-view")
+    div(ng-app="hipoApp",class="fullheight")
+        div(ng-view, class="fullheight ng-scope-view")
 block scripts
     script(src='/js/apps/core/controllers/main.js')
     script(src='/js/apps/core/controllers/suggestion.js')

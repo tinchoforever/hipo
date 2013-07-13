@@ -3,7 +3,7 @@
 angular.module('hipoApp', ['hipoApp.controllers', 'hipoApp.services', 'hipoApp.models'])
 .config(function ($routeProvider) {
   $routeProvider
-  .when('/home', {
+  .when('/diagnostico', {
     templateUrl: '/views/core/main.html',
     controller: 'mainController'
   })
