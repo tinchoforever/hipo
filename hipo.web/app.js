@@ -34,7 +34,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 
-app.get('/api/v1/activity/all', activities.all);
+app.get('/api/v1/activities/all', activities.all);
 app.get('/api/v1/suggestions', suggestions.detail);
 
 
