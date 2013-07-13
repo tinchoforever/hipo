@@ -1,0 +1,12 @@
+<h1>{{profile.name}}, Hoy es un genial dia para <strong>{{suggestion.name}}</strong> </h1>
+
+
+<ul>
+    <li ng-repeat="attr in suggestion.parameters">
+
+        <div ng-repeat="parsed in attr.parsed">
+            <h5>{{parsed}}</h5>
+        </div>
+        <h2>{{attr.value}}<small>{{attr.uom.symbol}}</small></h2>
+    </li>
+</ul>
