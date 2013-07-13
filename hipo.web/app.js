@@ -34,6 +34,7 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 
 app.get('/api/v1/activity/all', activities.all);
+app.post('/api/v1/suggestions/:?name', sugestions.detail);
 
 
 http.createServer(app).listen(app.get('port'), function(){
