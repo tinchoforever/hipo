@@ -16,7 +16,7 @@ angular.module('hipoApp', ['hipoApp.controllers', 'hipoApp.services', 'hipoApp.m
     controller: 'mapController'
   })
   .when('/', {
-    templateUrl: '/views/core/mock.html',
+    templateUrl: '/views/core/home.html',
     controller: 'mockController'
   })
   .otherwise({
