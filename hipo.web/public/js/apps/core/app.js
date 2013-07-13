@@ -11,6 +11,10 @@ angular.module('hipoApp', ['hipoApp.controllers', 'hipoApp.services', 'hipoApp.m
     templateUrl: '/views/core/suggestion.html',
     controller: 'suggestionController'
   })
+  .when('/donde', {
+    templateUrl: '/views/core/map.html',
+    controller: 'mapController'
+  })
   .when('/', {
     templateUrl: '/views/core/mock.html',
     controller: 'mockController'
