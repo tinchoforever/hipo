@@ -8,9 +8,10 @@ var express     = require('express')
   , path        = require('path');
 
 
-var routes      = require('./routes')
-  , user        = require('./routes/user')
-  , activities  = require('./routes/api/activities');
+var routes          = require('./routes')
+  , user            = require('./routes/user')
+  , activities      = require('./routes/api/activities')
+  , suggestions     = require('./routes/api/suggestions');
 
 
 var app = express();
@@ -34,7 +35,7 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 
 app.get('/api/v1/activity/all', activities.all);
-app.post('/api/v1/suggestions/:?name', sugestions.detail);
+app.get('/api/v1/suggestions', suggestions.detail);
 
 
 http.createServer(app).listen(app.get('port'), function(){
