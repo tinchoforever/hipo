@@ -21,6 +21,7 @@ exports.forKeyandUser = function(req, res){
     };
 
     res.json(activitySuggestion);
+    console.log(activitySuggestion);
     res.end();
 
 };
@@ -43,7 +44,7 @@ exports.forUser = function(req, res){
         weather: "nublado",
         parameters: parameters,
     };
-
+    console.log(activitySuggestion);
     res.json(activitySuggestion);
     res.end();
 
@@ -64,6 +65,7 @@ exports.detail = function(req, res){
     };
 
     res.json(activitySuggestion);
+    console.log(activitySuggestion);
     res.end();
 
 };
