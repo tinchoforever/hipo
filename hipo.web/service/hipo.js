@@ -61,10 +61,10 @@ exports.match = function(req, res) {
     });
 
     parameters.push({
-        name: "tabla marea",
-        parsed: ["tabla", "mar", "eas"],
-           value: Math.ceil((Math.random()*10)+1),
-        uom: {name: "metros", symbol: "m"}
+        name: "humedad",
+        parsed: ["hu", "me", "dad"],
+        value: Math.ceil(weatherResult.humidity * 100),
+        uom: {name: "porcentaje", symbol: "%"}
     });
 
     parameters.push({
@@ -74,11 +74,13 @@ exports.match = function(req, res) {
         uom: {name: "bandera", symbol: "B"}
     });
 
+
+    var precipitaciones = processPorcentage(profile.weather.precipitation);
     parameters.push({
         name: "va a llover hoy?",
-        parsed: ["llue", "ve?"],
-         value: Math.ceil((profile.weather.precipitation)+1),
-        uom: {name: "porcentaje", symbol: "%"}
+        parsed: ["llu", "via", "hoy",],
+         value: precipitaciones,
+        uom: {name: "porcentaje", symbol: " "}
     });
 
 
@@ -94,4 +96,15 @@ exports.match = function(req, res) {
 
   });
 };
+function processPorcentage(p){
 
+  if (p < 25){
+    return "NO";
+  }
+  else if (p >= 80 ){
+    return "SI";
+  }else {
+    return "TAL VEZ";
+  }
+
+}
