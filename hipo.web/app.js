@@ -13,7 +13,6 @@ var
   , activities      = require('./routes/api/activities')
   , suggestions     = require('./routes/api/suggestions')
   , places          = require('./routes/api/places')
-  , places4SQ          = require('./routes/api/places-4sq')
   , hipo            = require('./service/hipo');
 
 
@@ -45,7 +44,6 @@ app.get('/api/v1/suggestions/:name?', suggestions.detail);
 app.post('/api/v2/suggestions', suggestions.forUser);
 app.post('/api/v2/suggestions/:name?', suggestions.forKeyandUser);
 
-app.get('/api/v1/places/4sq', places4SQ.search);
 app.get('/api/v1/places/all', places.all);
 app.get('/api/v1/places/search/:name?', places.search);
 
