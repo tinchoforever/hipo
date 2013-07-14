@@ -12,7 +12,7 @@ hipoApp.controller('dondeController', function ($scope,wizard,profile,suggestion
 
     var onSuggestion = function(data){
         $scope.suggestion = data;
-        $scope.condition = "icon-" + "water";
+        $scope.condition = "icon-" + "light-up";
     };
     //Si hay actividad, la mando
     if (wizard.currentActivity !== ""){

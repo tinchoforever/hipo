@@ -18,13 +18,18 @@ body{
 /*home */
 .home a{
 	width: 171px;
-	margin: -200px 0 0 -85px;
-	padding-top: 300px;
+	margin: -240px 0 0 -85px;
+	padding-top: 265px;
 	background: url(/img/que-hacer-hoy.png) 0 0 no-repeat;
 	display: block;
 	position: absolute;
 	top: 50%;
 	left: 50%;
+}
+
+.home a h1{
+	color: #333;
+	padding-left: 30px;
 }
 
 .home a h2{
@@ -46,19 +51,36 @@ body{
 	left: 0;
 	top: 0;
 }
-/*.home div.copy h2{
-	font: 30px/25px 'Open Sans';
-	color: #333;
 
-	position: relative;
+/*main*/
+.main-list{
+	background:url(/img/que-hacer-hoy.png) center 30px no-repeat;
+	padding: 310px 0 0;
 }
-.home div.date h2{
-	font: bold 30px/25px 'Open Sans';
-	color: #333;
-	text-transform: uppercase;
-	position: relative;
+
+.main-list .scroll-cont{
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
 }
-*/
+
+.main-list .scroll-cont .scroll-cont-data{
+	overflow-y:scroll;
+	width: 100%;
+	height: 100%;
+}
+
+.main-list .scroll-cont .scroll-cont-data ul:after{
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.main-list .scroll-cont .scroll-cont-data li{
+	width:33.33%;
+	padding:0 10px 30px;
+	float: left;
+}
 
 /*suggestion*/
 .suggestion{
@@ -181,6 +203,24 @@ body{
 }
 
 /*suggestion-map*/
+.suggestion-map .title-gl{
+	padding:10px 0 40px;
+}
+
+.suggestion-map .title-gl a{
+	font:normal 13px/10px 'Open Sans';
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
+.suggestion-map .title-gl h1{
+	font:bold 38px/30px 'Open Sans';
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
 .suggestion-map .scroll-cont{
 	width: 100%;
 	height: 100%;
@@ -189,7 +229,7 @@ body{
 
 .suggestion-map .scroll-cont .scroll-cont-data{
 	width: 100%;
-	height: 100%;
+	height: 80%;
 	overflow-y: scroll; 
 }
 
@@ -210,6 +250,10 @@ body{
 	color: #333;
 	text-transform: uppercase;
 	letter-spacing: -2px;
+	width:100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .suggestion-map .scroll-cont .scroll-cont-data li h3{
