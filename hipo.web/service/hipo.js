@@ -19,7 +19,7 @@ exports.match = function(req, res) {
 	profile.user = user;
 
 
-  profile.month = 11;
+  profile.month = new Date().getMonth();
 
 
   profile.weather = {};
