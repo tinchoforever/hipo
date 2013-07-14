@@ -46,19 +46,36 @@ body{
 	left: 0;
 	top: 0;
 }
-/*.home div.copy h2{
-	font: 30px/25px 'Open Sans';
-	color: #333;
 
-	position: relative;
+/*main*/
+.main-list{
+	background:url(/img/que-hacer-hoy.png) center 30px no-repeat;
+	padding: 310px 0 0;
 }
-.home div.date h2{
-	font: bold 30px/25px 'Open Sans';
-	color: #333;
-	text-transform: uppercase;
-	position: relative;
+
+.main-list .scroll-cont{
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
 }
-*/
+
+.main-list .scroll-cont .scroll-cont-data{
+	overflow-y:scroll;
+	width: 100%;
+	height: 100%;
+}
+
+.main-list .scroll-cont .scroll-cont-data ul:after{
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.main-list .scroll-cont .scroll-cont-data li{
+	width:33.33%;
+	padding:0 10px 30px;
+	float: left;
+}
 
 /*suggestion*/
 .suggestion{
