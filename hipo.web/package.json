@@ -23,6 +23,7 @@
     "async": "0.2.9",
     "csv-json": "*",
     "array-extended": "0.0.9",
+    "json2csv":"*",
     "curly" : "0.6.2",
     "async": "0.2.9"
   }
