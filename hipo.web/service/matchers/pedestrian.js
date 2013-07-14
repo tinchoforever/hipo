@@ -51,7 +51,7 @@ exports.match = function(profile, callback){
 	}
 
 	console.log('adding walking places');
-	var suggestions = [{matching: matching, place : 'walk'}];
+	var suggestions = [{matching: matching, place : 'Museo'}];
 	callback(suggestions);
 
 };

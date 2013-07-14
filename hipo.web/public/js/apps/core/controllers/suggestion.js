@@ -1,7 +1,7 @@
 'use strict';
 var hipoApp = angular.module('hipoApp.controllers');
 
-hipoApp.controller('suggestionController', function ($scope,wizard,profile,suggestionService) {
+hipoApp.controller('suggestionController', function ($scope,wizard,profile,suggestionService, placesService) {
     $scope.ret = true;
     $scope.condition = "icon-" + "light-up";
 
@@ -11,7 +11,16 @@ hipoApp.controller('suggestionController', function ($scope,wizard,profile,sugge
         $scope.weekDay =moment().format('dddd');
         $scope.numberDay = decimos(moment().date());
         $scope.month=  moment().format('MMMM');
-        $scope.condition = "icon-" + "water";
+        $scope.condition = "icon-" + "light-up";
+        placesService.getAll(function(data){
+          for (var i = 0;i <data.length; i++) {
+                var point = data[i];
+                point.map = "http://staticmap.openstreetmap.de/staticmap.php?center=" + point.lat + ',' +point.lng + "&zoom=20&size=300x200&maptype=mapnik&markers="+ point.lat + ',' +point.lng +",lightblue1";
+
+            };
+            console.log(data[0]);
+            $scope.points = data;
+        });
     };
     //Si hay actividad, la mando
     if (wizard.currentActivity !== ""){

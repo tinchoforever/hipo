@@ -52,7 +52,7 @@ exports.match = function(profile, callback){
 	}
 
 	console.log('adding beaches');
-	var suggestions = [{matching: matching, place : 'beach'}];
+	var suggestions = [{matching: matching, place : 'Playa'}];
 	callback(suggestions);
 
 };

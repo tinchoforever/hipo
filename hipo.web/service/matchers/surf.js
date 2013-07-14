@@ -52,7 +52,7 @@ exports.match = function(profile, callback){
 	}
 
 	console.log('adding surf places');
-	var suggestions = [{matching: matching, place : 'surf'}];
+	var suggestions = [{matching: matching, place : 'Surf'}];
 	callback(suggestions);
 
 };
