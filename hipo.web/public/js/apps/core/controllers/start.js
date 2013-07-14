@@ -6,9 +6,30 @@ hipoApp.controller('startController', function ($scope,$location,wizard,activity
     $scope.finish = false;
 
 
+
+    $scope.show = function(i){
+        return $scope.steps[i];
+    };
+    $scope.next = function(){
+        $scope.steps[$scope.current] = false;
+         if ($scope.current+1 < $scope.steps.length ){
+            $scope.current++;
+            $scope.steps[$scope.current]=true;
+        }
+        else {
+            $scope.finish = true;
+        }
+    }
+
+
+
     $scope.start = function(){
-        $scope.hidden = false;
-        $scope.activities[0].show = true;
+        $scope.steps = [];
+        for (var i = 0; i < 2; i++) {
+           $scope.steps[i] = false;
+        };
+        $scope.steps[0] = true;
+        $scope.current = 0;
     }
     activityService.getAll(function(data){
 
@@ -18,6 +39,7 @@ hipoApp.controller('startController', function ($scope,$location,wizard,activity
             data[i].index= i;
         };
         $scope.activities = data;
+        $scope.activities[0].show = true;
     });
 
 
@@ -38,7 +60,7 @@ hipoApp.controller('startController', function ($scope,$location,wizard,activity
             $scope.activities[activity.index+1].show=true;
         }
         else {
-            $scope.finish =true;
+            $scope.next();
         }
     }
 

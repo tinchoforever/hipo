@@ -1,4 +1,4 @@
-<div class="fullheight suggestion">
+<div class="fullheight suggestion"  ng-animate="'fade'">
 	<div class="col col-left fullheight">
 		<h2>{{profile.name}}, Hoy es un genial dia para <a href="/#/que"><strong>{{suggestion.name}}</strong></a> </h2>
 		<div class="text">
@@ -6,7 +6,7 @@
 		</div>
 	</div>
 	<div class="main-col">
-		<div class="col" ng-repeat="attr in suggestion.parameters">
+		<div ng-show="ret" class="col" ng-repeat="attr in suggestion.parameters"  ng-animate="'fade'">
 			<div class="text">
 				<h2>{{attr.value}} <small>{{attr.uom.symbol}}</small></h2>
 				<p>
