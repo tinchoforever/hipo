@@ -186,17 +186,12 @@ body{
 	letter-spacing: -2px;
 	background: url(/img/arrow.png) center right no-repeat;
 	padding-right: 45px;
-}
-.suggestion .col-left .otro-hago a{
-	font:bold 15px/15px 'Open Sans';
-	color: #333;
-	text-transform: uppercase;
-	letter-spacing: -2px;
-	position: absolute;
-	bottom:275px;
-	left: 53px;
 	width:120px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
+
 .suggestion .main-col{
 	float: left;
 	width: 80%;
