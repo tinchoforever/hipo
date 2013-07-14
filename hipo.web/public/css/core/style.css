@@ -14,16 +14,39 @@ body{
 .fullheight{
 	height: 100%;
 }
-.home {
-	width: 100%;
-	margin: 0;
-	top: 27%;
-	left: 45%;
-	position: absolute;
-	padding: 0;
-}
+
 /*home */
-.home div.copy h2{
+.home a{
+	width: 171px;
+	margin: -200px 0 0 -85px;
+	padding-top: 300px;
+	background: url(/img/que-hacer-hoy.png) 0 0 no-repeat;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.home a h2{
+	font:bold 30px/25px 'Open Sans';
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: -2px;
+	position: relative;
+	left: 32px;
+	padding:30px 0 0;
+}
+
+.home a h2:before{
+	content: "";
+	width: 85px;
+	height: 4px;
+	background: #333;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+/*.home div.copy h2{
 	font: 30px/25px 'Open Sans';
 	color: #333;
 
@@ -35,6 +58,7 @@ body{
 	text-transform: uppercase;
 	position: relative;
 }
+*/
 
 /*suggestion*/
 .suggestion{
