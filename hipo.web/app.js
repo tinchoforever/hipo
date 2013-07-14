@@ -48,6 +48,7 @@ app.get('/api/v1/places/all', places.all);
 app.get('/api/v1/places/search/:name?', places.search);
 
 app.post('/api/v1/start', hipo.match)
+app.post('/api/v1/start/:name?', hipo.match)
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
