@@ -28,6 +28,7 @@ exports.match = function(req, res) {
     weatherResult = (JSON.parse(response.body)).currently;
 
     profile.weather.condition = weatherResult.summary;
+    profile.weather.precipitation = weatherResult.precipProbability;
     profile.weather.wind = {};
     profile.weather.icon = weatherResult.icon;
     profile.weather.temp = (weatherResult.temperature - 32)/ 1.8; // from Farenheit to celcius
@@ -74,9 +75,9 @@ exports.match = function(req, res) {
     });
 
     parameters.push({
-        name: "medusas",
-        parsed: ["me", "du", "sas"],
-         value: Math.ceil((Math.random()*100)+1),
+        name: "va a llover hoy?",
+        parsed: ["llue", "ve?"],
+         value: Math.ceil((profile.weather.precipitation)+1),
         uom: {name: "porcentaje", symbol: "%"}
     });
 
