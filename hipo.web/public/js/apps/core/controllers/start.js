@@ -75,7 +75,8 @@ hipoApp.controller('startController', function ($scope,$location,profile,activit
 
     $scope.submit = function(){
         profile.likes = $scope.likes;
-        profile.movility = $scope.mobility;
+        profile.likeTags = $scope.likeTags;
+        profile.mobility = $scope.mobility;
         profile.name= $scope.name;
         profile.save();
         window.location= "/#/quehagohoy";
