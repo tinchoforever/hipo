@@ -179,3 +179,16 @@ display: block;
 .suggestion .main-col .col:nth-child(4){
 	background-color: #aa2363;
 }
+
+/*suggestion-map*/
+.suggestion-map .scroll-cont{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.suggestion-map .scroll-cont .scroll-cont-data{
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll; 
+}
