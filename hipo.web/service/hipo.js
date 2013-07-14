@@ -3,35 +3,30 @@ var beach       = require('./matchers/beach')
   , surf        = require('./matchers/surf')
   , array       = require ('array-extended')
   , mocks       = require('../datasets/mocks.js')
-  , curly       = require('curly')
-  , async       = require('async');
-
+  , curly       = require('curly');
 
 var matchers = [beach, pedestrian, surf];
-var weatherResult;
 exports.match = function(req, res) {
 
 	var user = req.body;
-  console.log(user.name);
-  console.log(user.tags);
-  console.log(user.mobility);
-  console.log(user.date);
+    console.log(user.name);
+    console.log(user.tags);
+    console.log(user.mobility);
+    console.log(user.date);
 
 
-  var profile = {};
+    var profile = {};
 	profile.user = user;
+
 
   profile.month = 11;
 
-  //TODO: Get Weather
 
   profile.weather = {};
-  
-  //TODO store this on db
-  
+
   curly.get('https://api.forecast.io/forecast/3dc9db43b756c31a297a159fdb38b4d3/-37.9798584,-57.5897', function(err, response, body){
-    weatherResult = (JSON.parse(response.body)).currently;  
-  
+    weatherResult = (JSON.parse(response.body)).currently;
+
     profile.weather.condition = weatherResult.summary;
     profile.weather.wind = {};
     profile.weather.icon = weatherResult.icon;
@@ -49,9 +44,11 @@ exports.match = function(req, res) {
       });
     }
 
+
     var sorted = array.sort(activities, "matching");
     console.log(sorted);
     var current = sorted[2];
+
 
     //TODO: PARSE PARAMS FOR CURRENT ACTIVITY
     var parameters = [];
@@ -82,7 +79,8 @@ exports.match = function(req, res) {
          value: Math.ceil((Math.random()*100)+1),
         uom: {name: "porcentaje", symbol: "%"}
     });
-       
+
+
 
     var activitySuggestion = {
         name: current.place,
@@ -92,7 +90,7 @@ exports.match = function(req, res) {
     };
 
     res.json(activitySuggestion, 200);
+
   });
- 
-  
 };
+
