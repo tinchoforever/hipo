@@ -55,7 +55,7 @@ body{
 /*main*/
 .main-list{
 	background:url(/img/que-hacer-hoy.png) center 30px no-repeat;
-	padding: 310px 0 0;
+	padding: 350px 0 0;
 }
 
 .main-list .scroll-cont{
@@ -65,6 +65,7 @@ body{
 }
 
 .main-list .scroll-cont .scroll-cont-data{
+	text-align: center;
 	overflow-y:scroll;
 	width: 100%;
 	height: 100%;
@@ -77,9 +78,26 @@ body{
 }
 
 .main-list .scroll-cont .scroll-cont-data li{
-	width:33.33%;
+	width:25%;
 	padding:0 10px 30px;
 	float: left;
+}
+
+.main-list .scroll-cont .scroll-cont-data li h2{
+	font:bold 23px/23px 'Open Sans';
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: -2px;
+	width:100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.main-list .scroll-cont .scroll-cont-data li .img{
+	width: 100%;
+	height:100px;
+	overflow: hidden;
 }
 
 /*suggestion*/
