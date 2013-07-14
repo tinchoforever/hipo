@@ -1,0 +1,166 @@
+<html lang="en">
+    <head>
+        <style>
+            body{
+                width:1024px;
+                font-size: 36px;
+                font-family: 'Armata', sans-serif;
+				background: url(images/pt-1.png);
+				color: #eee;
+				text-shadow: 1px 1px 2px #000;
+            }
+
+            #start{
+                text-align:center;
+                width:1024px;
+               
+            }
+            #slide1{
+                text-align:center;
+                width:1024px;
+                
+            }
+            #slide2{
+                text-align:center;
+                width:1024px;
+               
+            }
+
+            .step{
+                text-align:center;
+                width:1024px;
+               
+            }
+
+            #slide7{
+                width:400px;
+            }
+            #slide8{
+                width:400px;
+            }
+            #slide9{
+                width:400px;
+            }
+
+            .hint_text{
+				margin-top: 120px;
+                font-size:30px;
+                background-color:#282a2f;
+                padding:15px;
+				border: 1px solid #484d52;
+				border-radius: 5px;
+				font-size: 18px;
+				
+            }
+
+
+
+            .fallback-message {
+               	color: #eee;
+                line-height: 1.3;
+                width: 780px;
+                padding: 10px 10px 0;
+                margin: 20px auto;
+                border: 1px solid #E4C652;
+                border-radius: 10px;
+              
+            }
+
+            .fallback-message p {
+                margin-bottom: 10px;
+            }
+
+            .impress-supported .fallback-message {
+                display: none;
+            }
+			em{
+				font-style: normal;
+				border-bottom: 1px solid #484d52;
+				padding-bottom: 2px;
+				color: #d5a830;
+			}
+        </style>
+    </head>
+    <body class="impress-not-supported">
+
+
+
+        <div id="impress">
+            <div id="start" class="step" >
+                <p>#HackatonMDQ</p>
+                <p>Hipo</p>
+                <img src="images/suma.png" opacity="0.6"/>
+            </div>
+
+            <div id="slide1" class="step" data-x="-1200">
+                <p>Hipo te dice todo  lo que necesitas saber para comenzar el dia, y nada mas.</p>	
+            </div>
+
+            <div id="slide2" class="step" data-x="1200">
+                <p>Funciona de manera sencilla, le decis que te interesa hacer sino tambien el dia de la semana, la hora del dia y diferentes condiciones climaticas.</p>
+                <p>A Hipo le podes preguntar tanto si esta lindo para ir a la playa, como tambien cual es el mejor lugar para hacer surf o que tanto te tenes de cuidar del sol. </p>
+                <p>En lugar de que le proporciona mas datos y visualizaciones de interpretar, se hace saber que - cuando se despierta, cómo ir al trabajo, si usted tiene mascotas para caminar - y luego le da un asesoramiento personalizado. </p>	
+            </div>
+
+            <div id="slide3" class="step" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+                <p>Ademas, queremos rejar APIs funcionando para que la comunidad construya sus propias applicaciones!!!</p>	
+            </div>
+
+            <div id="slide4" class="step" data-x="500" data-y="100" data-z="2000" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+                <img src="images/home.jpg" opacity="0.6"/>
+            </div>
+
+            <div id="slide5" class="step" data-x="3200" data-rotate="150">
+                <p>Una herramienta practica para el marplatence que quiere disfrutar de su ciudad, el turista y la comunidad 
+                    de programadores.</p>	
+            </div>
+
+            <div id="slide6" class="step" data-z="2000"  data-x="9200" data-y='1500'>
+                <img src="images/resultados.png" opacity="0.6"/>
+            </div>
+
+            <div id="slide7" class="step" data-x="4200" data-y='1500' data-z='1500'>
+                <p>Alla vamos...  y aqui estamos</p>	
+                <p>- api de clima</p>
+                <p>- api de playas y lugares</p>
+                <p>- api de sufing</p>
+
+            </div>
+
+            <div id="slide8" class="step" data-x="4900" data-y='1500' data-z='100'>
+                <p>api/v1/activities/all</p>
+
+                <p>/api/v1/suggestions</p>
+                <p>/api/v1/suggestions/:name?</p>
+
+                <p>/api/v2/suggestions</p>
+                <p>/api/v2/suggestions/:name?</p>
+
+                <p>/api/v1/places/all</p>
+                <p>/api/v1/places/search/:name?</p>
+                <p>/api/v1/places/all</p>
+                <p>/api/v1/places/search/:name?</p>
+
+                <p>/api/v1/start</p>
+                <p>/api/v1/start/:name?</p>
+            </div>
+
+            <div id="slide9" class="step" data-x="5600" data-y='1500' data-z='-1500' data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+                <p>I see you</p>
+                <img src="images/iseeyou.jpg" opacity="0.6"/>
+            </div>
+
+
+
+        </div>
+
+
+        <script type="text/javascript" src="js/impress.js"></script>
+        <script type="text/javascript">impress().init();</script>
+
+
+
+    </body>
+</html>
+
+
