@@ -22,7 +22,6 @@
     "connect-mongo": "0.3.3",
     "async": "0.2.9",
     "csv-json": "*",
-    "node-foursquare-2": "~0.1.5",
     "array-extended": "0.0.9"
   }
 }
