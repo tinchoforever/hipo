@@ -16,8 +16,8 @@ angular.module('hipoApp', ['hipoApp.controllers', 'hipoApp.services', 'hipoApp.m
     controller: 'suggestionController'
   })
   .when('/donde', {
-    templateUrl: '/views/core/map.html',
-    controller: 'mapController'
+    templateUrl: '/views/core/donde.html',
+    controller: 'dondeController'
   })
   .when('/', {
     templateUrl: '/views/core/home.html',

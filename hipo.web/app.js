@@ -46,6 +46,8 @@ app.post('/api/v2/suggestions/:name?', suggestions.forKeyandUser);
 
 app.get('/api/v1/places/all', places.all);
 app.get('/api/v1/places/search/:name?', places.search);
+app.post('/api/v1/places/all', places.all);
+app.post('/api/v1/places/search/:name?', places.search);
 
 app.post('/api/v1/start', hipo.match)
 app.post('/api/v1/start/:name?', hipo.match)
