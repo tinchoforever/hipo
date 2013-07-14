@@ -18,13 +18,18 @@ body{
 /*home */
 .home a{
 	width: 171px;
-	margin: -200px 0 0 -85px;
-	padding-top: 300px;
+	margin: -240px 0 0 -85px;
+	padding-top: 265px;
 	background: url(/img/que-hacer-hoy.png) 0 0 no-repeat;
 	display: block;
 	position: absolute;
 	top: 50%;
 	left: 50%;
+}
+
+.home a h1{
+	color: #333;
+	padding-left: 30px;
 }
 
 .home a h2{
