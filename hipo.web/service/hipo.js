@@ -33,6 +33,7 @@ exports.match = function(req, res) {
   
     profile.weather.condition = weatherResult.summary;
     profile.weather.wind = {};
+    profile.weather.icon = weatherResult.icon;
     profile.weather.temp = (weatherResult.temperature - 32)/ 1.8; // from Farenheit to celcius
     profile.weather.wind.speed = weatherResult.windSpeed;
 
@@ -47,13 +48,8 @@ exports.match = function(req, res) {
       });
     }
 
-
-
     var sorted = array.sort(activities, "matching");
     var current = sorted[0];
-
-
-
 
     //TODO: PARSE PARAMS FOR CURRENT ACTIVITY
     var parameters = [];
