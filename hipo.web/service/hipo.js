@@ -59,22 +59,22 @@ exports.match = function(req, res) {
 
 
 
-    var sorted = array.sort(activities, "matching");
-    var current = sorted[0];
+  var sorted = array.sort(activities, "matching");
+  var current = sorted[0];
 
 
 
-    //TODO: PARSE PARAMS FOR CURRENT ACTIVITY
-    var parameters = mocks.params;
+  //TODO: PARSE PARAMS FOR CURRENT ACTIVITY
+  var parameters = mocks.params;
 
-    var activitySuggestion = {
-        name: current.place,
-        matching: current.matching,
-        weather: profile.weather,
-        parameters: parameters,
-    };
+  var activitySuggestion = {
+      name: current.place,
+      matching: current.matching,
+      weather: profile.weather,
+      parameters: parameters,
+  };
 
-    res.json(activitySuggestion, 200);
+  res.json(activitySuggestion, 200);
 };
 
 var getCurrentWeather = function(callback) {
