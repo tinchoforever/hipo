@@ -16,7 +16,7 @@
         <div class="scroll-cont">
             <div class="scroll-cont-data">
                 <ul>
-                    <li ng-repeat="point in points" >
+                    <li ng-repeat="point in points | orderBy:'point.distance/100'" >
                         <h2>{{point.name}}</h2>
                         <h3>{{point.address}}</h3>
                         <img ng-src="{{point.map}}">

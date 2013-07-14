@@ -13,6 +13,14 @@ hipoApp.controller('dondeController', function ($scope,wizard,profile,suggestion
     var onSuggestion = function(data){
         $scope.suggestion = data;
         $scope.condition = "icon-" + "light-up";
+        placesService.getFor(data.name,function(data){
+        for (var i = 0;i <data.length; i++) {
+                var point = data[i];
+                point.map = "http://staticmap.openstreetmap.de/staticmap.php?center=" + point.lat + ',' +point.lng + "&zoom=20&size=300x200&maptype=mapnik&markers="+ point.lat + ',' +point.lng +",lightblue1";
+            };
+            console.log(data[0]);
+            $scope.points = data;
+        });
     };
     //Si hay actividad, la mando
     if (wizard.currentActivity !== ""){
@@ -23,14 +31,6 @@ hipoApp.controller('dondeController', function ($scope,wizard,profile,suggestion
 
         suggestionService.get(onSuggestion);
     }
-    placesService.getAll(function(data){
-      for (var i = 0;i <data.length; i++) {
-            var point = data[i];
-            point.map = "http://staticmap.openstreetmap.de/staticmap.php?center=" + point.lat + ',' +point.lng + "&zoom=20&size=300x200&maptype=mapnik&markers="+ point.lat + ',' +point.lng +",lightblue1";
 
-        };
-        console.log(data[0]);
-        $scope.points = data;
-    });
 
 });
