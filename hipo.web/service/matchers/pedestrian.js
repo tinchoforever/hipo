@@ -5,9 +5,8 @@ exports.match = function(profile, callback){
     
 	var matchingrule = [
 	                    {'condition' : 'wind', 'less': 35},
-	                    {'condition' : 'wind', 'greater': 25},
-	                    {'condition' : 'monthOfYear', 'less' : 3},
-	                    {'condition' : 'temp', 'greater' : 15}
+	                    {'condition' : 'condition', 'not': 'rain'},
+	                    {'condition' : 'temp', 'greater' : 10}
 	                   ];
 	var matching = 1;
 	for (currentRule in matchingrule) {
@@ -40,13 +39,13 @@ exports.match = function(profile, callback){
 			}
 		}
 		if (rule.not) {
-			if (rule.condition === compare) {
-				matching *= (staticInfo.percentMatch * 3);
+			if (rule.condition !== compare) {
+				matching *= (staticInfo.percentMatch / 2);
 			}
 		}
 		if (rule.is) {
-			if (rule.condition !== compare) {
-				matching *= (staticInfo.percentMatch * 3);
+			if (rule.condition === compare) {
+				matching *= (staticInfo.percentMatch / 2);
 			}
 		}
 	}

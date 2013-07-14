@@ -40,19 +40,19 @@ exports.match = function(profile, callback){
 			}
 		}
 		if (rule.not) {
-			if (rule.condition === compare) {
-				matching *= (staticInfo.percentMatch * 3);
+			if (rule.condition !== compare) {
+				matching *= (staticInfo.percentMatch / 2);
 			}
 		}
 		if (rule.is) {
-			if (rule.condition !== compare) {
-				matching *= (staticInfo.percentMatch * 3);
+			if (rule.condition === compare) {
+				matching *= (staticInfo.percentMatch / 2);
 			}
 		}
 	}
 
-	console.log('adding surf places');
-	var suggestions = [{matching: matching, place : 'surf'}];
+	console.log('adding beaches');
+	var suggestions = [{matching: matching, place : 'beach'}];
 	callback(suggestions);
 
 };

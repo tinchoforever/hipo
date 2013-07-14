@@ -9,11 +9,11 @@ exports.match = function(req, res) {
 	var profile = {};
 	profile.user = userprofile;
 	profile.weather = {};
-	profile.month = 1;
+	profile.month = 11;
 	profile.weather.condition = 'rain';
 	profile.weather.wind = {};
-	profile.weather.temp = 30;
-	profile.weather.wind.speed = 5;
+	profile.weather.temp = 13;
+	profile.weather.wind.speed = 1;
 
 	var activities = [];
 	for ( matcher in matchers) {
