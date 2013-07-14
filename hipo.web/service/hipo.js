@@ -1,10 +1,13 @@
 var beach       = require('./matchers/beach')
   , pedestrian  = require('./matchers/pedestrian')
   , surf        = require('./matchers/surf')
-  , array       = require ('array-extended');;
+  , array       = require ('array-extended');
 
 var matchers = [beach, pedestrian, surf];
 exports.match = function(req, res) {
+
+
+
 	var userprofile = req.params.profile;
 	var profile = {};
 	profile.user = userprofile;
@@ -15,6 +18,7 @@ exports.match = function(req, res) {
 	profile.weather.temp = 13;
 	profile.weather.wind.speed = 1;
 
+	
 	var activities = [];
 	for ( matcher in matchers) {
 		matchers[matcher].match(profile, function(records) {
