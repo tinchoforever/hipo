@@ -11,7 +11,7 @@ hipoApp.controller('suggestionController', function ($scope,wizard,profile,sugge
         $scope.weekDay =moment().format('dddd');
         $scope.numberDay = decimos(moment().date());
         $scope.month=  moment().format('MMMM');
-        $scope.condition = "icon-" + "water";
+        $scope.condition = "icon-" + "light-up";
         placesService.getAll(function(data){
           for (var i = 0;i <data.length; i++) {
                 var point = data[i];
