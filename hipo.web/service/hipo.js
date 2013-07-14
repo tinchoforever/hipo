@@ -9,17 +9,17 @@ var matchers = [beach, pedestrian, surf];
 exports.match = function(req, res) {
 
 	var user = req.body;
-    console.log(user.name);
-    console.log(user.tags);
-    console.log(user.mobility);
-    console.log(user.date);
+  console.log(user.name);
+  console.log(user.tags);
+  console.log(user.mobility);
+  console.log(user.date);
 
 
-    var profile = {};
+  var profile = {};
 	profile.user = user;
 
 
-  profile.month = 11;
+  profile.month = new Date().getMonth();
 
 
   profile.weather = {};
@@ -83,7 +83,7 @@ exports.match = function(req, res) {
 
 
     var activitySuggestion = {
-        name: current.place,
+        name: req.params.name ? req.params.name : current.place,
         matching: current.matching,
         weather: profile.weather,
         parameters: parameters,
