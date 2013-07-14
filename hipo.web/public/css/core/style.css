@@ -58,15 +58,24 @@ display: block;
 .suggestion .col .text{
 	position: absolute;
 	left: 0;
-	bottom: 40px;
+	bottom: 20px;
 	padding:0 0 0 48px;
 }
 
+.suggestion .col .text .icon-water{
+	color: #333;
+}
 
 .suggestion .col .text h2{
-	font:bold 65px/65px 'Open Sans';
+	font:bold 65px/50px 'Open Sans';
 	color: #333;
 	text-transform: uppercase;
+}
+.suggestion .col .text h2 sub{
+	color: #333;
+	font-size: 30px;
+	vertical-align:super;
+
 }
 
 .suggestion .col .text p{
@@ -74,7 +83,7 @@ display: block;
 	color: #333;
 	text-transform: uppercase;
 	letter-spacing: -1px;
-	padding-top: 42px;
+	padding-top: 22px;
 	position: relative;
 }
 
@@ -94,6 +103,26 @@ display: block;
 	float: left;
 	width: 20%;
 	height: 100%;
+	position: relative;
+}
+
+.suggestion .col-left .que-hago{
+	width: 162px;
+	height: 323px;
+	background:url(/img/que-hago-hoy.png) 0 0 no-repeat;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+.suggestion .col-left .que-hago a{
+	font:bold 45px/45px 'Open Sans';
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: -2px;
+	position: absolute;
+	bottom: -35px;
+	left: 32px;
 }
 
 .suggestion .main-col{
