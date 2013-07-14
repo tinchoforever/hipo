@@ -1,12 +1,26 @@
-<h1>{{profile.name}}, Hoy es un genial dia para <strong>{{suggestion.name}}</strong> </h1>
+<div class="fullheight suggestion"  ng-animate="'fade'">
+	<div class="col col-left fullheight">
+		<h2>{{profile.name}}, Hoy es un genial dia para <a href="/#/que"><strong>{{suggestion.name}}</strong></a> </h2>
+		<div class="text">
+			<p>Sabado<br />trece<br />julio</p>
+		</div>
+	</div>
+	<div class="main-col">
+		<div ng-show="ret" class="col" ng-repeat="attr in suggestion.parameters"  ng-animate="'fade'">
+			<div class="text">
+				<h2>{{attr.value}} <small>{{attr.uom.symbol}}</small></h2>
+				<p>
+					<span ng-repeat="parsed in attr.parsed">
+		            	{{parsed}}<br/ >
+		        	</span>
+		    	</p>
+			</div>
+		</div>
+	</div>
+</div>
 
 
-<ul>
-    <li ng-repeat="attr in suggestion.parameters">
 
-        <div ng-repeat="parsed in attr.parsed">
-            <h5>{{parsed}}</h5>
-        </div>
-        <h2>{{attr.value}}<small>{{attr.uom.symbol}}</small></h2>
-    </li>
-</ul>
+
+
+

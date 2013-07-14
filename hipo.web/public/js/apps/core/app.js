@@ -3,9 +3,13 @@
 angular.module('hipoApp', ['hipoApp.controllers', 'hipoApp.services', 'hipoApp.models'])
 .config(function ($routeProvider) {
   $routeProvider
-  .when('/home', {
+  .when('/que', {
     templateUrl: '/views/core/main.html',
     controller: 'mainController'
+  })
+  .when('/empezar', {
+    templateUrl: '/views/core/diagnostico/start.html',
+    controller: 'startController'
   })
   .when('/quehagohoy', {
     templateUrl: '/views/core/suggestion.html',
@@ -16,7 +20,7 @@ angular.module('hipoApp', ['hipoApp.controllers', 'hipoApp.services', 'hipoApp.m
     controller: 'mapController'
   })
   .when('/', {
-    templateUrl: '/views/core/mock.html',
+    templateUrl: '/views/core/home.html',
     controller: 'mockController'
   })
   .otherwise({

@@ -1,0 +1,41 @@
+<div ng-hide="steps">
+    <h1> <strong>Hipo</strong> necesita saber algunas cosas de vos</h1>
+    <h3> Algunas preguntas nos alcanzan </h3>
+    <div ng-show="hidden" class="xlarge btn secondary"><a ng-click="start()" href="">Empezar!</a></div>
+
+</div>
+<div ng-show="steps[0]" ng-animate="'fade'">
+    <h1> Como te dicen tus amigos?</h1>
+    <ul>
+        <li class="append field">
+            <input ng-model="name" class="text input" placeholder="Tu nombre aca" />
+        </li>
+    </ul>
+    <div ng-show="hidden" class="xlarge btn secondary icon-right entypo icon-right-open-big">
+        <a ng-click="next()" href="">Siguiente</a></div>
+
+</div>
+
+<div ng-show="steps[1]" ng-animate="'fade'">
+      <h1><strong>{{name}}</strong>, cual de estas cosas te gustan hacer?</h1>
+    <div class="questions"ng-show="activity.show"  ng-repeat="activity in activities" ng-animate="'fade'">
+        <h2>{{activity.name}}</h2>
+        <img class="photo"alt ="{{activity.name}}" ng-src="{{activity.pic}}"/>
+
+        <div class="xlarge oval btn secondary">
+            <a ng-click="no(activity)" href="">
+                <i class="icon-check" title=".icon-check"></i>
+            </a>
+        </div>
+        <div class="xlarge oval btn danger">
+            <a ng-click="yes(activity)" href="">
+                <i class="icon-cancel" title=".icon-cancel"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div ng-show="finish" ng-animate="'fade'">
+    <h1>Gracias {{name}}, ahora <strong>Hipo</strong> te puede decir que es lo mejor para vos!</h1>
+        <div class="xlarge btn secondary"><a href="/#/quehagohoy">Dale!</a></div>
+</div>

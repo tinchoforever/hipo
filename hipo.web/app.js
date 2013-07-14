@@ -8,11 +8,11 @@ var express     = require('express')
   , path        = require('path');
 
 
-var routes          = require('./routes')
-  , user            = require('./routes/user')
+var
+    index           = require('./routes/controllers/index.js')
   , activities      = require('./routes/api/activities')
   , suggestions     = require('./routes/api/suggestions')
-  , places          = require('./routes/api/places')
+  // , places          = require('./routes/api/places')
   , hipo            = require('./service/hipo');
 
 
@@ -34,13 +34,13 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
+app.get('/', index.home);
 
 app.get('/api/v1/activities/all', activities.all);
 app.post('/api/v1/start', hipo.match)
 app.get('/api/v1/suggestions', suggestions.detail);
 app.post('/api/v1/suggestions/:name?', suggestions.detail);
-app.get('/api/v1/places/search', places.search);
+// app.get('/api/v1/places/search', places.search);
 
 
 http.createServer(app).listen(app.get('port'), function(){
