@@ -27,6 +27,7 @@ exports.match = function(req, res) {
 
   profile.weather = {};
   
+  //TODO store this on db
   
   curly.get('https://api.forecast.io/forecast/3dc9db43b756c31a297a159fdb38b4d3/-37.9798584,-57.5897', function(err, response, body){
     weatherResult = (JSON.parse(response.body)).currently;  
@@ -49,7 +50,8 @@ exports.match = function(req, res) {
     }
 
     var sorted = array.sort(activities, "matching");
-    var current = sorted[0];
+    console.log(sorted);
+    var current = sorted[2];
 
     //TODO: PARSE PARAMS FOR CURRENT ACTIVITY
     var parameters = [];
