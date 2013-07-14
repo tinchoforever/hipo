@@ -13,6 +13,7 @@ var
   , activities      = require('./routes/api/activities')
   , suggestions     = require('./routes/api/suggestions')
   , places          = require('./routes/api/places')
+  , surfing          = require('./routes/api/surfing')
   , hipo            = require('./service/hipo');
 
 
@@ -51,6 +52,8 @@ app.post('/api/v1/places/search/:name?', places.search);
 
 app.post('/api/v1/start', hipo.match)
 app.post('/api/v1/start/:name?', hipo.match)
+
+app.post('/api/v1/surfing/all/now', surfing.all)
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

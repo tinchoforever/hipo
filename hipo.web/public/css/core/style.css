@@ -10,7 +10,6 @@ body{
 	overflow: hidden;
 }
 
-
 .fullheight{
 	height: 100%;
 }
@@ -218,6 +217,80 @@ body{
 
 .suggestion .main-col .col:nth-child(4){
 	background-color: #aa2363;
+}
+
+
+.sug-text, h2 small {
+  color: #333 !important;
+}
+
+/* Diagnostics */
+.steps-wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+.steps-wrapper input.input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #333;
+  color: #333;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #333;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #333;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #333;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #333;
+}
+
+
+.steps-wrapper div.xlarge.btn.secondary,
+.steps-wrapper div.xlarge.btn.primary {
+  margin: 20px 0;
+  background: #c2cf95 !important;
+  border: none !important;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.questions {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.questions h2 {
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  left: 0;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.7);
+  font-size: 52px;
+  font-weight: 600;
+  padding: 20px 0;
+}
+
+.questions img {
+  width: 100%;
+}
+
+.questions .choice {
+  width: 188px;
+  margin: 0 auto;
+  margin-top: -120px;
 }
 
 /*suggestion-map*/
