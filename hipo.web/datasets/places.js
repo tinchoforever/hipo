@@ -5,7 +5,7 @@ var points = [
         lng: -57.535743713378906,
         distance: 1406,
         address: "Av. Cristóbal Colón 1189",
-        category: "museo",
+        category: "museos",
         originalcategory: "Art Gallery"
     },
     {
@@ -14,7 +14,7 @@ var points = [
     lng: -57.54021991575249,
     distance: 1453,
     address: "Alberti 1343",
-    category: "museo",
+    category: "museos",
     originalcategory: "Art Gallery"
     },
 {
@@ -32,7 +32,7 @@ lat: -38.020362,
 lng: -57.545425,
 distance: 2197,
 address: "guemes",
-category: "museo",
+category: "museos",
 originalcategory: "Art Gallery"
 },
 {
@@ -41,7 +41,7 @@ lat: -38.004938320672515,
 lng: -57.54166603088379,
 distance: 600,
 address: "Boulevard Maritimo Peralta Ramos 2280",
-category: "museo",
+category: "museos",
 originalcategory: "Art Gallery"
 },
     {
@@ -49,7 +49,7 @@ originalcategory: "Art Gallery"
     lat: -38.033615,
     lng: -57.528364,
     distance: 3977,
-    category: "museo",
+    category: "museos",
     originalcategory: "History Museum"
     },
     {
@@ -57,7 +57,7 @@ originalcategory: "Art Gallery"
     lat: -37.99005377634726,
     lng: -57.546489374347104,
     distance: 1178,
-    category: "museo",
+    category: "museos",
     originalcategory: "Science Museum"
     },
     {
@@ -66,7 +66,7 @@ originalcategory: "Art Gallery"
     lng: -57.53567397594452,
     distance: 1458,
     address: "Av. Cristóbal Colón 1114",
-    category: "museo",
+    category: "museos",
     originalcategory: "Science Museum"
     },
 
@@ -128,7 +128,7 @@ originalcategory: "Art Gallery"
     lat: -38.02509833647173,
     lng: -57.53997666390688,
     distance: 2771,
-    category: "museo",
+    category: "museos",
     originalcategory: "Residential Building (Apartment / Condo)"
     },
     {
@@ -204,7 +204,7 @@ originalcategory: "Art Gallery"
         lng: -57.53567397594452,
         distance: 1458,
         address: "Av. Cristóbal Colón 1114",
-        category: "museo",
+        category: "museos",
         originalcategory: "Science Museum"
     },
     {
