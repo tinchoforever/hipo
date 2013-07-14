@@ -137,6 +137,7 @@ display: block;
 	position: absolute;
 	top: 20px;
 	left: 20px;
+	padding:312px 0 0 35px;
 }
 
 .suggestion .col-left .que-hago a{
@@ -144,9 +145,8 @@ display: block;
 	color: #333;
 	text-transform: uppercase;
 	letter-spacing: -2px;
-	position: absolute;
-	bottom: -35px;
-	left: 32px;
+	background: url(/img/arrow.png) center right no-repeat;
+	padding-right: 45px;
 }
 .suggestion .col-left .otro-hago a{
 	font:bold 15px/15px 'Open Sans';
