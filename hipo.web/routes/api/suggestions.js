@@ -1,37 +1,59 @@
 
+var mocks = require('../../datasets/mocks.js');
+
+exports.forKeyandUser = function(req, res){
+
+    var name = req.params.name ? req.params.name : "Playa";
+    //User Params
+    console.log(req.body.name);
+    console.log(req.body.tags);
+    console.log(req.body.mobility);
+    console.log(req.body.date);
+
+    var parameters = mocks.params;
+
+
+    var activitySuggestion = {
+        name: name,
+        weather: "nublado",
+        parameters: parameters,
+    };
+
+    res.json(activitySuggestion);
+    res.end();
+
+};
+
+exports.forUser = function(req, res){
+
+    var name = req.params.name ? req.params.name : "Playa";
+    //User Params
+    console.log(req.body.name);
+    console.log(req.body.tags);
+    console.log(req.body.mobility);
+    console.log(req.body.date);
+
+    var parameters = mocks.params;
+
+
+    var activitySuggestion = {
+        name: name,
+        weather: "nublado",
+        parameters: parameters,
+    };
+
+    res.json(activitySuggestion);
+    res.end();
+
+};
+
 
 exports.detail = function(req, res){
 
     var name = req.params.name ? req.params.name : "Playa";
 
-    var parameters = [];
-    parameters.push({
-        name: "temperatura",
-        parsed: ["tem", "pera", "tura"],
-        value: Math.ceil((Math.random()*10)+1),
-        uom: {name: "grados", symbol: "˚"}
-    });
+    var parameters = mocks.params;
 
-    parameters.push({
-        name: "tabla marea",
-        parsed: ["tabla", "mar", "eas"],
-           value: Math.ceil((Math.random()*10)+1),
-        uom: {name: "metros", symbol: "m"}
-    });
-
-    parameters.push({
-        name: "bandera mar",
-        parsed: ["ban", "dera", "mar"],
-        value: "A",
-        uom: {name: "bandera", symbol: "B"}
-    });
-
-    parameters.push({
-        name: "medusas",
-        parsed: ["me", "du", "sas"],
-         value: Math.ceil((Math.random()*100)+1),
-        uom: {name: "porcentaje", symbol: "%"}
-    });
 
     var activitySuggestion = {
         name: name,

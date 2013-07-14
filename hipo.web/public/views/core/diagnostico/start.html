@@ -6,13 +6,20 @@
 </div>
 <div ng-show="steps[0]" ng-animate="'fade'">
     <h1> Como te dicen tus amigos?</h1>
+    <form name="myForm">
     <ul>
         <li class="append field">
-            <input ng-model="name" class="text input" placeholder="Tu nombre aca" />
+            <input name="name" ng-model="name" ng-required="true"
+            class="text input" placeholder="Tu apodo aca" />
         </li>
     </ul>
-    <div ng-show="hidden" class="xlarge btn secondary icon-right entypo icon-right-open-big">
-        <a ng-click="next()" href="">Siguiente</a></div>
+        <span class="error" ng-show="myForm.name.$error.required">
+       <strong> Necesitamos saber como te llamas... </strong></span>
+    <div ng-show="!myForm.name.$error.required"
+        class="xlarge btn secondary icon-right entypo icon-right-open-big" ng-animate="'fade'">
+        <a ng-click="next()" href="">Siguiente</a>
+    </div>
+    </form>
 
 </div>
 
@@ -34,8 +41,20 @@
         </div>
     </div>
 </div>
-
+<div ng-show="steps[2]" ng-animate="'fade'">
+      <h1><strong>{{name}}</strong>, como te moves por la ciudad?</h1>
+    <div class="xlarge btn primary ">
+        <a ng-click="movilidad('bici')" href="">Bici</a>
+    </div>
+    <div class="xlarge btn primary ">
+        <a ng-click="movilidad('colectivo')" href="">Colectivo</a>
+    </div>
+      <div class="xlarge btn primary ">
+        <a ng-click="movilidad('auto')" href="">Auto</a>
+    </div>
+    <h3> Dale, es la ultima...</h3>
+</div>
 <div ng-show="finish" ng-animate="'fade'">
     <h1>Gracias {{name}}, ahora <strong>Hipo</strong> te puede decir que es lo mejor para vos!</h1>
-        <div class="xlarge btn secondary"><a href="/#/quehagohoy">Dale!</a></div>
+        <div class="xlarge btn secondary"><a ng-click="submit()" href="">Dale!</a></div>
 </div>

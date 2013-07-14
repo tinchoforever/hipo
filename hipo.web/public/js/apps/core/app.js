@@ -27,4 +27,3 @@ angular.module('hipoApp', ['hipoApp.controllers', 'hipoApp.services', 'hipoApp.m
     redirectTo: '/'
   });
 });
-

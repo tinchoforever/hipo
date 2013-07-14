@@ -39,7 +39,10 @@ app.get('/', index.home);
 app.get('/api/v1/activities/all', activities.all);
 app.post('/api/v1/start', hipo.match)
 app.get('/api/v1/suggestions', suggestions.detail);
-app.post('/api/v1/suggestions/:name?', suggestions.detail);
+app.get('/api/v1/suggestions/:name?', suggestions.detail);
+
+app.post('/api/v2/suggestions', suggestions.forUser);
+app.post('/api/v2/suggestions/:name?', suggestions.forKeyandUser);
 // app.get('/api/v1/places/search', places.search);
 
 

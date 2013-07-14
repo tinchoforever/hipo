@@ -1,10 +1,11 @@
 'use strict';
 var hipoApp = angular.module('hipoApp.controllers');
 
-hipoApp.controller('startController', function ($scope,$location,wizard,activityService) {
+hipoApp.controller('startController', function ($scope,$location,profile,activityService) {
     $scope.hidden = true;
     $scope.finish = false;
-
+    $scope.likes = [];
+    $scope.likeTags = [];
 
 
     $scope.show = function(i){
@@ -21,11 +22,9 @@ hipoApp.controller('startController', function ($scope,$location,wizard,activity
         }
     }
 
-
-
     $scope.start = function(){
         $scope.steps = [];
-        for (var i = 0; i < 2; i++) {
+        for (var i = 0; i < 3; i++) {
            $scope.steps[i] = false;
         };
         $scope.steps[0] = true;
@@ -46,6 +45,8 @@ hipoApp.controller('startController', function ($scope,$location,wizard,activity
     $scope.yes = function(activity){
         activity.show = false;
         activity.selected =true;
+        $scope.likes.push(activity);
+        $scope.likeTags.push(activity.name);
         $scope.moveToNext(activity);
 
     };
@@ -64,10 +65,20 @@ hipoApp.controller('startController', function ($scope,$location,wizard,activity
         }
     }
 
-    $scope.suggestFor = function(activity){
+    $scope.movilidad =function(name){
+        $scope.mobility = name;
+        $scope.next();
+    }
 
-        wizard.currentActivity = activity.name;
-        // window.location= "/#/quehagohoy"
-    };
+
+
+
+    $scope.submit = function(){
+        profile.likes = $scope.likes;
+        profile.movility = $scope.mobility;
+        profile.name= $scope.name;
+        profile.save();
+        window.location= "/#/quehagohoy";
+    }
 
 });
