@@ -1,7 +1,7 @@
 <div class="fullheight suggestion suggestion-map"  ng-animate="'fade'">
     <div class="col col-left fullheight">
         <div class="que-hago">
-            <a href="/#/donde">{{suggestion.name}} <small>({{points.length}})</small></a>
+            <a href="/#/donde">{{suggestion.name}}</a>
         </div>
         <div class="text">
             <h1><i ng-class="condition"></i></h1>
@@ -9,10 +9,10 @@
         </div>
     </div>
     <div class="main-col">
-        <a href="/#/que"><strong>{{profile.name}}</strong>, tenes ganas de hacer otra cosa?
-                </a>
-
-        <!--<h1> Lista o mapa van aca</h1>-->
+        <div class="title-gl">
+            <a href="/#/que"><strong>{{profile.name}}</strong>, tenes ganas de hacer otra cosa?</a>
+            <h1>Se han encontrado {{points.length}} resultados:</h1>
+        </div>
         <div class="scroll-cont">
             <div class="scroll-cont-data">
                 <ul>
