@@ -90,6 +90,7 @@ exports.match = function(req, res) {
         matching: current.matching,
         weather: profile.weather,
         parameters: parameters,
+        condition: profile.weather.condition
     };
 
     res.json(activitySuggestion, 200);

@@ -4,7 +4,8 @@ var hipoApp = angular.module('hipoApp.controllers');
 hipoApp.controller('dondeController', function ($scope,wizard,profile,suggestionService, placesService) {
 
     $scope.ret = true;
-    $scope.condition = "icon-" + "light-up";
+    $scope.condition = "sunny-container";
+    $scope.pattern = "sunny-pattern";
     $scope.profile =profile;
     $scope.weekDay =moment().format('dddd');
     $scope.numberDay = decimos(moment().date());
@@ -12,7 +13,8 @@ hipoApp.controller('dondeController', function ($scope,wizard,profile,suggestion
 
     var onSuggestion = function(data){
         $scope.suggestion = data;
-        $scope.condition = "icon-" + "light-up";
+        $scope.condition = "sunny-container";
+        $scope.pattern = "sunny-pattern";
     };
     //Si hay actividad, la mando
     if (wizard.currentActivity !== ""){

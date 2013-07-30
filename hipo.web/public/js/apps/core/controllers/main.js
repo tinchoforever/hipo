@@ -2,7 +2,8 @@
 var hipoApp = angular.module('hipoApp.controllers', []);
 
 hipoApp.controller('mainController', function ($scope,$location,wizard,activityService) {
-    $scope.condition = "icon-" + "light-up";
+    $scope.condition = "sunny-container";
+    $scope.pattern = "sunny-pattern";
     activityService.getAll(function(data){
         $scope.activities = data;
     });

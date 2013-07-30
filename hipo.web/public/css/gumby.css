@@ -7095,3 +7095,147 @@ footer#credits .socbtns {
 #templates {
   padding-bottom: 200px;
 }
+
+
+/* ------- Lourdes magic ----------- */
+
+/*------------------------------------------------------------------*\
+    $ANIMATION
+\*------------------------------------------------------------------*/
+.slide .demo-animation-container {
+  margin: -20px 0 0 -40px;
+  width: 100%;
+}
+
+.slide .demo-animation {
+  margin-right: 15px;
+  margin-top: 40px!important;
+  height: 570px;
+  width: 23.5%;
+  float: right;
+  position: relative;
+}
+
+.slide .demo-home-title {
+  width: 180px;
+  height: 463px;
+  position: absolute;
+  z-index: 20;
+  top: 120px;
+  left: 50px;
+  -webkit-transform: scale(.8);
+}
+
+.rain-container {
+  background: #0ba2d3;
+}
+
+.cloudy-container {
+  background: #e4f6a4;
+}
+
+.sunny-container {
+  background: #fae003;
+  -webkit-animation: sunny-bg 2s linear infinite;
+}
+
+@-webkit-keyframes sunny-bg {
+  0% {background: #fae003;}
+  50% {background: #fff600;}
+  100% {background: #fae003;}
+}
+
+
+.storm-container {
+  background: #aa2363;
+}
+
+.rain-title {
+  background: url(../../img/demos/hipo-home-rain.png) no-repeat;
+}
+
+.cloud-title {
+  background: url(../../img/demos/hipo-home-cloud.png) no-repeat;
+}
+
+.sunny-title {
+  background: url(../../img/demos/hipo-home-sunny.png) no-repeat;
+}
+
+.storm-title {
+  background: url(../../img/demos/hipo-home-storm.png) no-repeat;
+}
+
+.storm-icon {
+  background: url(../../img/demos/storm.png) no-repeat;
+  position: absolute;
+  z-index: 30;
+  top: 30px;
+  right: 30px;
+  width: 132px;
+  height: 132px;
+  -webkit-animation: storm-cloud 1s linear infinite;
+}
+
+@-webkit-keyframes storm-cloud {
+  0%{-webkit-transform: scale(1);}
+  50%{-webkit-transform: scale(1.1);}
+  0%{-webkit-transform: scale(1);}
+}
+
+.rain-pattern {
+  width: 100%;
+  height: 100%;
+    background-image: url('../../img/demos/rain.png'), url('../../img/demos/rain2.png');
+    -webkit-animation: rain 3s linear infinite;
+}
+
+@-webkit-keyframes rain {
+  0% {background-position: 0 0;}
+  100% {background-position: 0 1500px, 0 600px;}
+}
+
+.cloudy-pattern {
+  width: 100%;
+  height: 100%;
+    background-image: url('../../img/demos/cloud.png'), url('../../img/demos/cloud2.png');
+    -webkit-animation: cloud 8s linear infinite;
+}
+
+@-webkit-keyframes cloud {
+  0% {background-position: 0 0;}
+  100% {background-position: 500px 0, 300px 0;}
+}
+
+.sunny-animation {
+  width: 110px;
+  height: 110px;
+  background-image: url('../../img/demos/sun.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 30px;
+  left: 145px;
+  -webkit-animation: sunny 2s linear infinite;
+}
+
+@-webkit-keyframes sunny {
+  0% {-webkit-transform: rotate(0deg);}
+  100% {-webkit-transform: rotate(360deg);}
+}
+
+.storm-pattern {
+  width: 100%;
+  height: 100%;
+  background-color: #f9d2e4;
+  -webkit-animation: storm 2s linear infinite;
+}
+
+@-webkit-keyframes storm {
+  0% {opacity: 0}
+  5% {opacity: .5}
+  10% {opacity: .2}
+  15% {opacity: .5}
+  20% {opacity: 0}
+  100% {opacity: 0;}
+}
+
