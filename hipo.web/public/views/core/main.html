@@ -3,8 +3,12 @@
 		<div class="scroll-cont-data">
 			<ul>
 				<li ng-repeat="activity in activities">
-				    <h2><a href="" ng-click="suggestFor(activity)">{{activity.name}}</a></h2>
-				    <img alt ="{{activity.name}}" ng-src="{{activity.pic}}"/>
+					<a href="" ng-click="suggestFor(activity)">
+					    <h2>{{activity.name}}</h2>
+					    <div class="img">
+					    	<img alt ="{{activity.name}}" ng-src="{{activity.pic}}"/>
+						</div>
+				    </a>
 				</li>
 			</ul>
 		</div>

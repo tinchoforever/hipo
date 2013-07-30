@@ -10,7 +10,6 @@ body{
 	overflow: hidden;
 }
 
-
 .fullheight{
 	height: 100%;
 }
@@ -55,7 +54,7 @@ body{
 /*main*/
 .main-list{
 	background:url(/img/que-hacer-hoy.png) center 30px no-repeat;
-	padding: 310px 0 0;
+	padding: 350px 0 0;
 }
 
 .main-list .scroll-cont{
@@ -65,6 +64,7 @@ body{
 }
 
 .main-list .scroll-cont .scroll-cont-data{
+	text-align: center;
 	overflow-y:scroll;
 	width: 100%;
 	height: 100%;
@@ -77,9 +77,26 @@ body{
 }
 
 .main-list .scroll-cont .scroll-cont-data li{
-	width:33.33%;
+	width:25%;
 	padding:0 10px 30px;
 	float: left;
+}
+
+.main-list .scroll-cont .scroll-cont-data li h2{
+	font:bold 23px/23px 'Open Sans';
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: -2px;
+	width:100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.main-list .scroll-cont .scroll-cont-data li .img{
+	width: 100%;
+	height:100px;
+	overflow: hidden;
 }
 
 /*suggestion*/
@@ -169,17 +186,12 @@ body{
 	letter-spacing: -2px;
 	background: url(/img/arrow.png) center right no-repeat;
 	padding-right: 45px;
-}
-.suggestion .col-left .otro-hago a{
-	font:bold 15px/15px 'Open Sans';
-	color: #333;
-	text-transform: uppercase;
-	letter-spacing: -2px;
-	position: absolute;
-	bottom:275px;
-	left: 53px;
 	width:120px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
+
 .suggestion .main-col{
 	float: left;
 	width: 80%;
@@ -200,6 +212,80 @@ body{
 
 .suggestion .main-col .col:nth-child(4){
 	background-color: #aa2363;
+}
+
+
+.sug-text, h2 small {
+  color: #333 !important;
+}
+
+/* Diagnostics */
+.steps-wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+.steps-wrapper input.input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #333;
+  color: #333;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #333;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #333;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #333;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #333;
+}
+
+
+.steps-wrapper div.xlarge.btn.secondary,
+.steps-wrapper div.xlarge.btn.primary {
+  margin: 20px 0;
+  background: #c2cf95 !important;
+  border: none !important;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.questions {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.questions h2 {
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  left: 0;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.7);
+  font-size: 52px;
+  font-weight: 600;
+  padding: 20px 0;
+}
+
+.questions img {
+  width: 100%;
+}
+
+.questions .choice {
+  width: 188px;
+  margin: 0 auto;
+  margin-top: -120px;
 }
 
 /*suggestion-map*/
