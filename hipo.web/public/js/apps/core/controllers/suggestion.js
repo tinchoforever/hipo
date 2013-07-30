@@ -4,7 +4,7 @@ var hipoApp = angular.module('hipoApp.controllers');
 hipoApp.controller('suggestionController', function ($scope,wizard,profile,suggestionService, placesService) {
     $scope.ret = true;
     $scope.condition = "sunny-container";
-    $scope.pattern = "sunny-pattern";
+    $scope.pattern = "sunny-animation";
 
     var onSuggestion = function(data){
         $scope.suggestion = data;
@@ -14,9 +14,10 @@ hipoApp.controller('suggestionController', function ($scope,wizard,profile,sugge
         $scope.month=  moment().format('MMMM');
 
         var condition = data.weather.condition;
-        $scope.condition = "sunny-container";
-        $scope.pattern = "sunny-pattern";
-        if (condition.indexOf('Cloudy')) {
+        $scope.condition = "rain-container";
+        $scope.pattern = "rain-pattern";
+        $scope.title = "rain-title";
+        /*if (condition.indexOf('Cloudy')) {
             $scope.condition = "cloudy-container";
             $scope.pattern = "cloudy-pattern";
         } else if (condition.indexOf('Storm')) {
@@ -24,11 +25,11 @@ hipoApp.controller('suggestionController', function ($scope,wizard,profile,sugge
             $scope.pattern = "storm-pattern";
         } else if (condition.indexOf('Sunny')) {
             $scope.condition = "sunny-container";
-            $scope.pattern = "sunny-pattern";
+            $scope.pattern = "sunny-annimation";
         } else if (condition.indexOf('Rain')) {
             $scope.condition = "rain-container";
             $scope.pattern = "rain-pattern";
-        }
+        }*/
         
         placesService.getAll(function(data){
           for (var i = 0;i <data.length; i++) {

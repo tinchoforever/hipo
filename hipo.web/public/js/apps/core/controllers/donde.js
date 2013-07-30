@@ -5,7 +5,7 @@ hipoApp.controller('dondeController', function ($scope,wizard,profile,suggestion
 
     $scope.ret = true;
     $scope.condition = "sunny-container";
-    $scope.pattern = "sunny-pattern";
+    $scope.pattern = "sunny-animation";
     $scope.profile =profile;
     $scope.weekDay =moment().format('dddd');
     $scope.numberDay = decimos(moment().date());
@@ -14,7 +14,7 @@ hipoApp.controller('dondeController', function ($scope,wizard,profile,suggestion
     var onSuggestion = function(data){
         $scope.suggestion = data;
         $scope.condition = "sunny-container";
-        $scope.pattern = "sunny-pattern";
+        $scope.pattern = "sunny-animation";
         placesService.getFor(data.name,function(data){
         for (var i = 0;i <data.length; i++) {
                 var point = data[i];

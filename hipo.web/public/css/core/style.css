@@ -14,6 +14,11 @@ body{
 	height: 100%;
 }
 
+.quarter{
+	height: 105px;
+	width: 171px;
+}
+
 /*home */
 .home a{
 	width: 171px;
@@ -170,12 +175,12 @@ body{
 }
 
 .suggestion .col-left .que-hago{
-	width: 162px;
+	width: 179px;
 	height: 323px;
-	background:url(/img/que-hago-hoy.png) 0 0 no-repeat;
 	position: absolute;
 	top: 20px;
 	left: 20px;
+	z-index: 2;
 	padding:312px 0 0 35px;
 }
 

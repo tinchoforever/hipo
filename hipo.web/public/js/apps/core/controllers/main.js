@@ -3,7 +3,7 @@ var hipoApp = angular.module('hipoApp.controllers', []);
 
 hipoApp.controller('mainController', function ($scope,$location,wizard,activityService) {
     $scope.condition = "sunny-container";
-    $scope.pattern = "sunny-pattern";
+    $scope.pattern = "sunny-animation";
     activityService.getAll(function(data){
         $scope.activities = data;
     });
